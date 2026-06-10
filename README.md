@@ -224,3 +224,42 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+
+## Common Mistakes
+
+Here are some of the most frequent Git mistakes beginners make and how to avoid them:
+
+1. **Committing Directly to `main`**
+   - *Mistake:* Working and committing changes directly on the default `main` branch instead of using feature branches.
+   - *Fix:* Always create a new branch using `git checkout -b type/branch-name` before making changes.
+
+2. **Using Force Push (`git push --force`)**
+   - *Mistake:* Using `--force` can overwrite your teammates' work on the remote repository.
+   - *Fix:* Use `git push --force-with-lease` instead. This safely aborts the push if there are newer changes on the remote branch.
+
+3. **Writing Bad or Unclear Commit Messages**
+   - *Mistake:* Writing short, non-descriptive messages like "fix", "update", or "done".
+   - *Fix:* Follow the standard pattern: `type(scope): short description`. For example: `feat(readme): add common mistakes section`.
+
+4. **Forgetting to Pull Before Working**
+   - *Mistake:* Starting to write code on an outdated local branch, which leads to heavy merge conflicts later.
+   - *Fix:* Always run `git checkout main` and `git pull origin main` before starting any new task to keep your local repo synchronized.
+## Common Mistakes
+
+Here are some of the most frequent Git mistakes beginners make and how to avoid them:
+
+1. **Committing Directly to `main`**
+   - *Mistake:* Working and committing changes directly on the default `main` branch instead of using feature branches.
+   - *Fix:* Always create a new branch using `git checkout -b type/branch-name` before making changes.
+
+2. **Using Force Push (`git push --force`)**
+   - *Mistake:* Using `--force` can overwrite your teammates' work on the remote repository.
+   - *Fix:* Use `git push --force-with-lease` instead. This safely aborts the push if there are newer changes on the remote branch.
+
+3. **Writing Bad or Unclear Commit Messages**
+   - *Mistake:* Writing short, non-descriptive messages like "fix", "update", or "done".
+   - *Fix:* Follow the standard pattern: `type(scope): short description`. For example: `feat(readme): add common mistakes section`.
+
+4. **Forgetting to Pull Before Working**
+   - *Mistake:* Starting to write code on an outdated local branch, which leads to heavy merge conflicts later.
+   - *Fix:* Always run `git checkout main` and `git pull origin main` before starting any new task to keep your local repo synchronized.
