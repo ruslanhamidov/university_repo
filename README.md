@@ -224,3 +224,20 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+
+
+
+
+
+
+
+## Common Mistakes
+
+1. **Mistake:** Committing directly to main.
+   **Fix:** Always create a new branch for your features.
+2. **Mistake:** Forgetting to pull before pushing.
+   **Fix:** Run `git pull origin main` frequently.
+3. **Mistake:** Large, unrelated commits.
+   **Fix:** Keep commits small and focused on one task.
+4. **Mistake:** Losing work in a merge conflict.
+   **Fix:** Use `git status` to identify conflicts and rebase carefully.
