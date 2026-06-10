@@ -26,9 +26,9 @@ Go through at least one of these before you begin:
 2. Click **Fork** in the top-right corner.
 3. Select your personal account as the destination.
 4. Open your terminal.
-5. Run `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
-6. Run `cd REPO_NAME`
-7. Run `git remote add upstream https://github.com/ORIGINAL_OWNER/REPO_NAME.git`
+5. Run `git clone https://github.com/YOUR_USERNAME/university_repo.git`
+6. Run `cd university_repo`
+7. Run `git remote add upstream https://github.com/ORIGINAL_OWNER/university_repo.git`
 8. Run `git remote -v` — confirm you see both `origin` and `upstream`.
 
 > `origin` points to your fork. `upstream` points to the original repo.
@@ -60,7 +60,7 @@ Go through at least one of these before you begin:
 6. Click **Create project**.
 7. Set the columns to: `Backlog` → `To Do` → `In Progress` → `In Review` → `Done`.
 8. Go to `TASKS.md` and create a GitHub Issue for each task.
-9. Open the board and add each issue as a card under **Backlog**.
+9. Issues will automatically appear on your board once you link the project in the right sidebar.
 10. Assign each card to a team member.
 
 ### How the board moves
