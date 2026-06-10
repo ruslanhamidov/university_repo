@@ -82,9 +82,8 @@ Go through at least one of these before you begin:
 
 ### Branch naming pattern
 
-```
 type/short-description
-```
+
 
 | Type | When to use |
 |------|-------------|
@@ -95,12 +94,11 @@ type/short-description
 | `chore` | Config, structure, tooling |
 
 **Good examples:**
-```
 feat/add-deployment-guide
 fix/broken-links-in-intro
 docs/improve-commit-section
 chore/reorganize-folder-structure
-```
+
 
 ---
 
@@ -108,21 +106,19 @@ chore/reorganize-folder-structure
 
 ### Commit message pattern
 
-```
 type(scope): short description
-```
+
 
 - `type` — same types as branch naming
 - `scope` — the file or section affected, e.g. `readme`, `tasks`, `intro`
 - `short description` — lowercase, present tense, no period at the end
 
 **Good examples:**
-```
 feat(readme): add branching section with examples
 fix(tasks): correct broken link in task 3
 docs(intro): rewrite opening paragraph for clarity
 chore: move images into /assets folder
-```
+
 
 ### Making a commit
 
@@ -147,13 +143,9 @@ chore: move images into /assets folder
 4. Write the PR title using the same convention as commits: `feat(readme): add branching section`
 5. Fill in the description:
 
-```
-## What does this PR do?
-
-## Why?
-
-## How to review it?
-```
+What does this PR do?
+Why?
+How to review it?
 
 6. Assign at least one teammate as **Reviewer**.
 7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue.
@@ -180,13 +172,12 @@ chore: move images into /assets folder
 
 When two people edited the same part of the same file, Git will pause and show you this inside the file:
 
-```
 <<<<<<< HEAD
 your version of the line
-=======
 your teammate's version of the line
->>>>>>> origin/main
-```
+
+origin/main
+
 
 1. Open the conflicted file in your editor.
 2. Find all the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
@@ -223,4 +214,13 @@ git rebase origin/main
 
 # Something went wrong
 git rebase --abort
-```
+EOF
+
+
+### Addım 4: Commit et və GitHub-a göndər (Push)
+İndi bu dəyişiklikləri qeydiyyata alıb göndəririk. Müəllimin `CONVENTIONS.md` qaydasına uyğun olaraq `fix(readme)` növündən istifadə edirik:
+
+```bash
+git add README.md
+git commit -m "fix(readme): clarify steps and fix broken formatting symbols"
+git push -u origin fix/readme-audit
