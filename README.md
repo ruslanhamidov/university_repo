@@ -23,6 +23,7 @@ Go through at least one of these before you begin:
 > Do this once at the start of the project.
 
 1.Part A
+1. Xətt B
 2. Click **Fork** in the top-right corner.
 3. Select your personal account as the destination.
 4. Open your terminal.
