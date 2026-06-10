@@ -224,3 +224,17 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+## What We Built
+
+| File | Description |
+|------|-------------|
+| README.md | Main guide for the project |
+| TASKS.md | Sprint tasks and assignments |
+| GLOSSARY.md | Git/GitHub terms reference |
+| CONTRIBUTING.md | Contribution guidelines |
+
+## Contributors
+
+- [@lamanonim](https://github.com/lamanonim)
+- [@Alijewa25](https://github.com/Alijewa25)
+- [@Murad-Cavadov](https://github.com/Murad-Cavadov)
