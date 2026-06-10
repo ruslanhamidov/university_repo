@@ -224,3 +224,22 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+## Common Mistakes
+
+Here are 4 frequent Git mistakes beginners make and how to avoid or fix them:
+
+1. **Committing directly to `main`**
+   * *The Mistake:* Working and committing changes directly on the production branch.
+   * *How to fix:* Always create a feature branch (`git checkout -b feat/your-feature`) before making changes.
+
+2. **Using `git push --force`**
+   * *The Mistake:* Overwriting the remote history blindly, potentially destroying teammates' work.
+   * *How to fix:* Use `git push --force-with-lease` instead. It safely checks if anyone else has pushed updates before forcing.
+
+3. **Writing bad or vague commit messages**
+   * *The Mistake:* Writing messages like "updates", "fix", or "test".
+   * *How to fix:* Follow Conventional Commits format (e.g., `feat: add glossary file` or `fix: correct typo in installation steps`).
+
+4. **Forgetting to pull before pushing**
+   * *The Mistake:* Trying to push changes when your local branch is outdated, leading to rejected pushes.
+   * *How to fix:* Run `git pull origin <branch-name>` regularly to stay sync with your team.
