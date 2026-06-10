@@ -3,7 +3,7 @@
 This is your complete reference for working with Git and GitHub as a team.
 Read it top to bottom once, then use it as a reference while you work.
 
-The actual tasks you need to complete are in `TASKS.md`.
+The actual tasks you need to complete are in `guides/TASKS.md`.
 
 ---
 
@@ -59,7 +59,7 @@ Go through at least one of these before you begin:
 5. Name it `Sprint 1`.
 6. Click **Create project**.
 7. Set the columns to: `Backlog` → `To Do` → `In Progress` → `In Review` → `Done`.
-8. Go to `TASKS.md` and create a GitHub Issue for each task.
+8. Go to `guides/TASKS.md` and create a GitHub Issue for each task.
 9. Open the board and add each issue as a card under **Backlog**.
 10. Assign each card to a team member.
 
