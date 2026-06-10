@@ -201,6 +201,21 @@ your teammate's version of the line
 
 ---
 
+
+## Common Mistakes
+
+### 1. Committing directly to main
+Always create a separate branch before making changes.
+
+### 2. Using git push --force
+Prefer git push --force-with-lease to avoid overwriting teammates' work.
+
+### 3. Forgetting to pull before starting work
+Always update your local main branch before creating a new branch.
+
+### 4. Writing unclear commit messages
+Use meaningful commit messages that clearly describe the change.
+
 ## Quick Reference
 
 ```bash
