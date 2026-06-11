@@ -1,7 +1,6 @@
 # 🧑‍💻 GitHub Collaboration Guide
 
-This is your complete reference for working with Git and GitHub as a team.
-Read it top to bottom once, then use it as a reference while you work.
+This guide was updated by Person A to improve clarity and readability for all team members. Read it top to bottom once, then use it as a reference while you work.
 
 The actual tasks you need to complete are in `TASKS.md`.
 
