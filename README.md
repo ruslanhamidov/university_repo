@@ -224,3 +224,4 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+## common mistakes
