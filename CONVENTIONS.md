@@ -1,5 +1,5 @@
 # CONVENTIONS.md — Naming & Workflow Rules
-
+When you start a task: You must instantly drag your card into the To Do section.
 This file covers how to name things and what commands to run. Follow these exactly.
 
 ---
