@@ -224,4 +224,20 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
-## common mistakes
+## Common Mistakes
+
+### 1. Committing Directly to the `main` Branch
+* **Mistake:** Making changes and committing them directly to the production or `main` branch.
+* **How to fix:** Always create a new feature or fix branch using `git checkout -b branch-name` before writing code, and merge it via a Pull Request.
+
+### 2. Using `git push --force`
+* **Mistake:** Forcing a push to the remote repository, which can overwrite and destroy your teammates' work.
+* **How to fix:** Use `git push --force-with-lease` instead. It is a safer option that prevents you from overwriting remote changes if someone else has pushed code in the meantime.
+
+### 3. Writing Vague or Bad Commit Messages
+* **Mistake:** Writing unhelpful commit messages like "fix", "updated file", or "changes". This makes the project history impossible to understand.
+* **How to fix:** Follow standard commit conventions. Use descriptive, imperative messages like `feat: add login validation` or `fix: resolve profile picture crash`.
+
+### 4. Committing Sensitive or Large Files (e.g., `.env`, `node_modules`)
+* **Mistake:** Forgetting to exclude heavy folders or secret API keys, exposing them to the public repository.
+* **How to fix:** Create a `.gitignore` file at the root of your project and list all files and folders that Git should ignore before making your first commit.
