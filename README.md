@@ -77,7 +77,7 @@ Go through at least one of these before you begin:
 > Do this every time you start a new task.
 
 1. Run `git checkout main`
-2. Run `git pull origin main`
+2. Run `git pull origin main` — this syncs your local main with the latest changes from the remote.
 3. Run `git checkout -b type/short-description`
 
 ### Branch naming pattern
