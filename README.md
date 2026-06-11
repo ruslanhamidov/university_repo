@@ -224,3 +224,54 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+
+---
+
+## 10. Common Mistakes
+
+### ❌ Committing directly to `main`
+Never work on `main` directly. Always create a new branch first.
+```bash
+# Wrong
+git checkout main
+git commit -m "my change"
+
+# Right
+git checkout -b feat/my-change
+git commit -m "feat: my change"
+```
+
+### ❌ Using `git push --force` instead of `--force-with-lease`
+`--force` blindly overwrites the remote branch — you can delete a teammate's work.
+`--force-with-lease` is safe: it checks if someone else pushed first.
+```bash
+# Dangerous
+git push --force
+
+# Safe
+git push --force-with-lease
+```
+
+### ❌ Writing bad commit messages
+Vague messages make the history unreadable.
+```bash
+# Bad
+git commit -m "fix"
+git commit -m "updated stuff"
+git commit -m "asdfgh"
+
+# Good
+git commit -m "fix(readme): correct broken link in section 3"
+```
+
+### ❌ Not syncing with `main` before opening a PR
+If you don't pull the latest `main` before pushing, your PR will have conflicts.
+Always run this before opening a PR:
+```bash
+git fetch origin
+git rebase origin/main
+```
+
+### ❌ Merging your own PR
+You should never approve and merge your own pull request.
+Always assign a teammate as reviewer and wait for their approval.
