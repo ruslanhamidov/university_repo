@@ -1,5 +1,5 @@
 # 🧑‍💻 GitHub Collaboration Guide
-
+- **When you start a task:** Move the card to the **To Do** column directly to signal the team.
 This is your complete reference for working with Git and GitHub as a team.
 Read it top to bottom once, then use it as a reference while you work.
 
