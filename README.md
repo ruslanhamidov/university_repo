@@ -248,3 +248,19 @@ Fix: Write descriptive messages like `fix(readme): clarify installation steps`
 ### 4. Not pulling before pushing
 Pushing without pulling first causes conflicts.
 Fix: Always run `git pull origin main` before starting work.
+
+## What We Built
+
+### Files in this repository
+
+- **README.md** — Complete guide for working with Git and GitHub as a team, including common mistakes section.
+- **GLOSSARY.md** — Definitions of key Git and GitHub terms for new contributors.
+- **guides/CONVENTIONS.md** — Conventions and rules for contributing to this repository.
+- **guides/TASKS.md** — Sprint tasks and instructions for the team.
+- **CONTRIBUTING.md** — Guidelines on how to contribute to this project.
+
+### Contributors
+
+- [@fatimehuseynli19](https://github.com/fatimehuseynli19)
+- [@ulvibrahimov](https://github.com/ulvibrahimov)
+- [@Aysel-Bayramova](https://github.com/Aysel-Bayramova)
