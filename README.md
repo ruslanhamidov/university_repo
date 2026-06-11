@@ -25,7 +25,7 @@ Go through at least one of these before you begin:
 1. Open the repository page on GitHub.
 2. Click **Fork** in the top-right corner.
 3. Select your personal account as the destination.
-4. Open your terminal.
+4. Open your terminal in the folder where you want to save the project.
 5. Run `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
 6. Run `cd REPO_NAME`
 7. Run `git remote add upstream https://github.com/ORIGINAL_OWNER/REPO_NAME.git`
