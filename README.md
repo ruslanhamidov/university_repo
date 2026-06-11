@@ -25,7 +25,7 @@ Go through at least one of these before you begin:
 1. Open the repository page on GitHub.
 2. Click **Fork** in the top-right corner.
 3. Select your personal account as the destination.
-4. Open your terminal.
+4. Open your terminal in the folder where you want to save the project.
 5. Run `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
 6. Run `cd REPO_NAME`
 7. Run `git remote add upstream https://github.com/ORIGINAL_OWNER/REPO_NAME.git`
@@ -77,7 +77,7 @@ Go through at least one of these before you begin:
 > Do this every time you start a new task.
 
 1. Run `git checkout main`
-2. Run `git pull origin main`
+2. Run `git pull origin main` — this syncs your local main with the latest changes from the remote.
 3. Run `git checkout -b type/short-description`
 
 ### Branch naming pattern
@@ -145,7 +145,7 @@ chore: move images into /assets folder
 2. Click **Compare & pull request**.
 3. Set **base** to `main` and confirm **compare** is your branch.
 4. Write the PR title using the same convention as commits: `feat(readme): add branching section`
-5. Fill in the description:
+5. Fill in the PR description using this template:
 
 ```
 ## What does this PR do?
@@ -166,7 +166,7 @@ chore: move images into /assets folder
 
 ## 8. What to Do When a Teammate Merges to Main
 
-> Run this every time before you start working, and whenever you see a new merge on `main`.
+> Run this every time before you start working, and whenever you see a new merge on `main`. Skipping this step may cause conflicts in your branch.
 
 1. Run `git fetch origin`
 2. Run `git checkout your-branch-name`
