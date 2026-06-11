@@ -1,5 +1,6 @@
 # 🧑‍💻 GitHub Collaboration Guide
-
+- **When you start a task:** Move the card to the **To Do** column directly to signal the team.
+When you start a task: You must instantly drag your card into the To Do section.
 This is your complete reference for working with Git and GitHub as a team.
 Read it top to bottom once, then use it as a reference while you work.
 
@@ -65,10 +66,10 @@ Go through at least one of these before you begin:
 
 ### How the board moves
 
-- When you start a task → move card to **To Do**
-- When you are actively working → move to **In Progress**
-- When your PR is open → move to **In Review**
-- When the PR is merged → move to **Done**
+- When you move a task from Backlog to prepare for it → move card to **To Do**
+- When you are actively working on a task → move to **In Progress**
+- When your PR is open and waiting for approval → move to **In Review**
+- When the PR is merged into main → move to **Done**
 
 ---
 
@@ -77,14 +78,13 @@ Go through at least one of these before you begin:
 > Do this every time you start a new task.
 
 1. Run `git checkout main`
-2. Run `git pull origin main`
+2. Run `git pull upstream main`
 3. Run `git checkout -b type/short-description`
 
 ### Branch naming pattern
 
-```
 type/short-description
-```
+
 
 | Type | When to use |
 |------|-------------|
@@ -95,12 +95,11 @@ type/short-description
 | `chore` | Config, structure, tooling |
 
 **Good examples:**
-```
 feat/add-deployment-guide
 fix/broken-links-in-intro
 docs/improve-commit-section
 chore/reorganize-folder-structure
-```
+
 
 ---
 
@@ -108,21 +107,19 @@ chore/reorganize-folder-structure
 
 ### Commit message pattern
 
-```
 type(scope): short description
-```
+
 
 - `type` — same types as branch naming
 - `scope` — the file or section affected, e.g. `readme`, `tasks`, `intro`
 - `short description` — lowercase, present tense, no period at the end
 
 **Good examples:**
-```
 feat(readme): add branching section with examples
 fix(tasks): correct broken link in task 3
 docs(intro): rewrite opening paragraph for clarity
 chore: move images into /assets folder
-```
+
 
 ### Making a commit
 
@@ -147,13 +144,9 @@ chore: move images into /assets folder
 4. Write the PR title using the same convention as commits: `feat(readme): add branching section`
 5. Fill in the description:
 
-```
-## What does this PR do?
-
-## Why?
-
-## How to review it?
-```
+What does this PR do?
+Why?
+How to review it?
 
 6. Assign at least one teammate as **Reviewer**.
 7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue.
@@ -168,9 +161,9 @@ chore: move images into /assets folder
 
 > Run this every time before you start working, and whenever you see a new merge on `main`.
 
-1. Run `git fetch origin`
+1. Run `git fetch upstream`
 2. Run `git checkout your-branch-name`
-3. Run `git rebase origin/main`
+3. Run `git rebase upstream/main`
 4. If there are no conflicts, run `git push --force-with-lease`
 5. If there are conflicts, continue to the next section.
 
@@ -180,33 +173,35 @@ chore: move images into /assets folder
 
 When two people edited the same part of the same file, Git will pause and show you this inside the file:
 
-```
+```text
 <<<<<<< HEAD
 your version of the line
 =======
 your teammate's version of the line
->>>>>>> origin/main
-```
+>>>>>>> upstream/main
+Open the conflicted file in your editor.
 
-1. Open the conflicted file in your editor.
-2. Find all the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
-3. Decide which version to keep — yours, theirs, or a mix of both.
-4. Delete the three marker lines entirely.
-5. Save the file.
-6. Run `git add filename.md`
-7. Run `git rebase --continue`
-8. Run `git push --force-with-lease`
+Find all the conflict markers (<<<<<<<, =======, >>>>>>>).
 
-> If something goes wrong at any point, run `git rebase --abort` to undo the rebase and go back to where you started.
+Decide which version to keep — yours, theirs, or a mix of both.
 
----
+Delete the three marker lines entirely.
 
-## Quick Reference
+Save the file.
 
-```bash
+Run git add filename.md
+
+Run git rebase --continue
+
+Run git push --force-with-lease
+
+If something goes wrong at any point, run git rebase --abort to undo the rebase and go back to where you started.
+
+Quick Reference
+Bash
 # Start a new task
 git checkout main
-git pull origin main
+git pull upstream main
 git checkout -b feat/your-task
 
 # Save your work
@@ -218,9 +213,29 @@ git commit -m "feat(scope): description"
 git push -u origin feat/your-task
 
 # Sync with main
-git fetch origin
-git rebase origin/main
+git fetch upstream
+git rebase upstream/main
 
 # Something went wrong
 git rebase --abort
-```
+
+Common Mistakes
+1. Committing Directly to the main Branch
+Mistake: Making changes and committing them directly to the production or main branch.
+
+How to fix: Always create a new feature or fix branch using git checkout -b branch-name before writing code, and merge it via a Pull Request.
+
+2. Using git push --force
+Mistake: Forcing a push to the remote repository, which can overwrite and destroy your teammates' work.
+
+How to fix: Use git push --force-with-lease instead. It is a safer option that prevents you from overwriting remote changes if someone else has pushed code in the meantime.
+
+3. Writing Vague or Bad Commit Messages
+Mistake: Writing unhelpful commit messages like "fix", "updated file", or "changes". This makes the project history impossible to understand.
+
+How to fix: Follow standard commit conventions. Use descriptive, imperative messages like feat: add login validation or fix: resolve profile picture crash.
+
+4. Committing Sensitive or Large Files (e.g., .env, node_modules)
+Mistake: Forgetting to exclude heavy folders or secret API keys, exposing them to the public repository.
+
+How to fix: Create a .gitignore file at the root of your project and list all files and folders that Git should ignore before making your first commit.
