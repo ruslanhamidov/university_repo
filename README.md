@@ -217,6 +217,7 @@ git rebase upstream/main
 
 # Something went wrong
 git rebase --abort
+
 Common Mistakes
 1. Committing Directly to the main Branch
 Mistake: Making changes and committing them directly to the production or main branch.
