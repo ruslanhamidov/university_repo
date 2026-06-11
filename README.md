@@ -224,3 +224,36 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+## Common Mistakes
+
+### 1. Committing Directly to the main Branch
+* **The Mistake:** Making changes and committing code directly to the `main` branch instead of creating an isolated feature branch. This risks breaking stable code and complicates the team's workflow.
+* **The Fix:** Always switch to `main`, pull the latest updates, and create a dedicated branch before working:
+```bash
+  git checkout main
+  git pull origin main
+  git checkout -b feat/your-feature-name
+
+### 2. Using git push --force Instead of --force-with-lease
+The Mistake: Using git push --force (or -f) after a rebase. This blindly overwrites the remote repository and can accidentally destroy a teammate's commits if they pushed to the same branch.
+
+The Fix: Use --force-with-lease instead. This safely aborts the push if someone else has updated the remote branch since your last fetch:
+
+
+  git push --force-with-lease
+
+### 3. Writing Vague or Unstructured Commit Messages
+The Mistake: Using clear-as-mud commit messages like fix, done, updates, or working code. This makes tracking the project history and debugging an absolute nightmare.
+
+The Fix: Adhere to the rule set in CONVENTIONS.md. Use the imperative mood, lowercase, and include a type and scope:
+
+  git commit -m "feat(readme): add common mistakes section"
+
+### 4. Branching Off an Outdated local main Branch
+The Mistake: Creating a new branch from your local main without pulling the latest changes that your teammates have already merged. This guarantees nasty merge conflicts later on.
+
+The Fix: Make it a daily habit to synchronize your local repository before spawning any new branch:
+
+  git checkout main
+  git pull origin main
+  git checkout -b type/short-description
