@@ -224,3 +224,24 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+
+
+## What We Built
+
+
+
+- **Files:** 
+
+    - `README.md` - Project documentation and audit guide.
+
+    - `GLOSSARY.md` - Technical terms and definitions.
+
+    - `CONTRIBUTING.md` - Guidelines for contributors.
+
+- **Contributors:** 
+
+    - Aydan Mahmudova[(aydan-10)](https://github.com/aydan-10)
+
+    - Sakina Aliyeva ([eliyevasekine159-sv](https://github.com/eliyevasekine159-sv))
+
+    - Naila Aslanova ([naslnva](https://github.com/naslnva))
