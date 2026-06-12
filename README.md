@@ -171,6 +171,7 @@ chore: move images into /assets folder
 1. Run `git fetch origin`
 2. Run `git checkout your-branch-name`
 3. Run `git rebase origin/main`
+   (If successful, this merges the latest changes from the main branch into your current branch.)
 4. If there are no conflicts, run `git push --force-with-lease`
 5. If there are conflicts, continue to the next section.
 
