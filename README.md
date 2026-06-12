@@ -63,6 +63,11 @@ Go through at least one of these before you begin:
 9. Open the board and add each issue as a card under **Backlog**.
 10. Assign each card to a team member.
 
+⚠️ If Projects/Board is not visible for teammates, check:
+- Repository visibility (private repos may restrict access)
+- Whether teammates are added as collaborators
+- Project permissions in Settings
+
 ### How the board moves
 
 - When you start a task → move card to **To Do**
