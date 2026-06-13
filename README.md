@@ -1,7 +1,7 @@
 # 🧑‍💻 GitHub Collaboration Guide
 
-This is your complete reference for working with Git and GitHub as a team.
-Read it top to bottom once, then use it as a reference while you work.
+This README is a beginner-friendly guide for contributing to this project with Git and GitHub.
+Use it to follow the correct workflow from setup to pull request review.
 
 The actual tasks you need to complete are in `TASKS.md`.
 
