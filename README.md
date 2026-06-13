@@ -21,6 +21,7 @@ Go through at least one of these before you begin:
 ## 1. How to Fork the Repository
 
 > Do this once at the start of the project.
+> If you are added as a collaborator with write access, you can clone the shared repository directly instead of forking. If you do not have write access, fork the repository first and work from your fork.
 
 1. Open the repository page on GitHub.
 2. Click **Fork** in the top-right corner.
@@ -65,10 +66,11 @@ Go through at least one of these before you begin:
 
 ### How the board moves
 
-- When you start a task → move card to **To Do**
-- When you are actively working → move to **In Progress**
-- When your PR is open → move to **In Review**
-- When the PR is merged → move to **Done**
+- When a task is not started yet → keep it in **Backlog**
+- When you plan to work on the task next → move it to **To Do**
+- When you create a branch and start editing files → move it to **In Progress**
+- When your PR is open → move it to **In Review**
+- When the PR is approved and merged → move it to **Done**
 
 ---
 
@@ -78,7 +80,8 @@ Go through at least one of these before you begin:
 
 1. Run `git checkout main`
 2. Run `git pull origin main`
-3. Run `git checkout -b type/short-description`
+3. If you are working from a fork, make sure your fork is synced with the original repository before creating a branch.
+4. Run `git checkout -b type/short-description`
 
 ### Branch naming pattern
 
@@ -156,7 +159,7 @@ chore: move images into /assets folder
 ```
 
 6. Assign at least one teammate as **Reviewer**.
-7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue.
+7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue. If the Issue is in another repository, use the full format: `Closes OWNER/REPO#ISSUE_NUMBER`.
 8. Click **Create Pull Request**.
 9. Move your Kanban card to **In Review**.
 
@@ -195,7 +198,8 @@ your teammate's version of the line
 5. Save the file.
 6. Run `git add filename.md`
 7. Run `git rebase --continue`
-8. Run `git push --force-with-lease`
+8. If Git shows another conflict, repeat steps 1–7 until the rebase finishes.
+9. Run `git push --force-with-lease`
 
 > If something goes wrong at any point, run `git rebase --abort` to undo the rebase and go back to where you started.
 
