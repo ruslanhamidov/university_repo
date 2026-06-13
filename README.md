@@ -66,10 +66,11 @@ Go through at least one of these before you begin:
 
 ### How the board moves
 
-- When you start a task → move card to **To Do**
-- When you are actively working → move to **In Progress**
-- When your PR is open → move to **In Review**
-- When the PR is merged → move to **Done**
+- When a task is not started yet → keep it in **Backlog**
+- When you plan to work on the task next → move it to **To Do**
+- When you create a branch and start editing files → move it to **In Progress**
+- When your PR is open → move it to **In Review**
+- When the PR is approved and merged → move it to **Done**
 
 ---
 
