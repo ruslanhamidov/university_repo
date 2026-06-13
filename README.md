@@ -1,9 +1,9 @@
 # 🧑‍💻 GitHub Collaboration Guide
 
-This is your complete reference for working with Git and GitHub as a team.
+This is a complete guide edited by Person A and Person B.
 Read it top to bottom once, then use it as a reference while you work.
 
-The actual tasks you need to complete are in `TASKS.md`.
+The actual tasks you need to complete are in `guides/TASKS.md`.
 
 ---
 
@@ -59,7 +59,7 @@ Go through at least one of these before you begin:
 5. Name it `Sprint 1`.
 6. Click **Create project**.
 7. Set the columns to: `Backlog` → `To Do` → `In Progress` → `In Review` → `Done`.
-8. Go to `TASKS.md` and create a GitHub Issue for each task.
+8. Go to `guides/TASKS.md` and create a GitHub Issue for each task.
 9. Open the board and add each issue as a card under **Backlog**.
 10. Assign each card to a team member.
 
@@ -181,11 +181,11 @@ chore: move images into /assets folder
 When two people edited the same part of the same file, Git will pause and show you this inside the file:
 
 ```
-<<<<<<< HEAD
+
 your version of the line
-=======
+Z=======
 your teammate's version of the line
->>>>>>> origin/main
+
 ```
 
 1. Open the conflicted file in your editor.
