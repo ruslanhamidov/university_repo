@@ -181,11 +181,8 @@ chore: move images into /assets folder
 When two people edited the same part of the same file, Git will pause and show you this inside the file:
 
 ```
-<<<<<<< HEAD
-your version of the line
-=======
-your teammate's version of the line
->>>>>>> origin/main
+This is a practical Git and GitHub teamwork guide for students.
+
 ```
 
 1. Open the conflicted file in your editor.
