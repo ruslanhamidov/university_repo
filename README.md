@@ -1,6 +1,6 @@
 # 🧑‍💻 GitHub Collaboration Guide
 
-This is a practical Git and GitHub teamwork guide for students.
+This repository is a collaborative Git and GitHub learning guide.
 Read it top to bottom once, then use it as a reference while you work.
 
 The actual tasks you need to complete are in `TASKS.md`.
