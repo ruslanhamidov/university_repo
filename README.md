@@ -224,3 +224,25 @@ git rebase origin/main
 # Something went wrong
 git rebase --abort
 ```
+## Common Mistakes
+
+### 1. Committing directly to main
+
+Beginners often make changes directly on the `main` branch. This is risky because `main` should always contain stable code.
+**Fix:** Create a new branch for every task using `git checkout -b branch-name`.
+
+### 2. Using `git push --force`
+
+Using `git push --force` can overwrite teammates' work and cause lost commits.
+**Fix:** Use `git push --force-with-lease` when you really need to update a rebased branch.
+
+### 3. Writing unclear commit messages
+
+Bad commit messages like `update`, `fix`, or `changes` do not explain what was changed.
+**Fix:** Use clear commit messages such as `feat(readme): add common mistakes section`.
+
+### 4. Forgetting to pull the latest changes
+
+If you start working without pulling the latest version of `main`, your branch may become outdated and cause conflicts.
+**Fix:** Always run `git checkout main` and `git pull origin main` before creating a new branch.
+
