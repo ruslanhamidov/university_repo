@@ -159,7 +159,7 @@ chore: move images into /assets folder
 ```
 
 6. Assign at least one teammate as **Reviewer**.
-7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue.
+7. Write `Closes #ISSUE_NUMBER` in the description to link the Issue. If the Issue is in another repository, use the full format: `Closes OWNER/REPO#ISSUE_NUMBER`.
 8. Click **Create Pull Request**.
 9. Move your Kanban card to **In Review**.
 
