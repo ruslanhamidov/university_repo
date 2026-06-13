@@ -80,7 +80,8 @@ Go through at least one of these before you begin:
 
 1. Run `git checkout main`
 2. Run `git pull origin main`
-3. Run `git checkout -b type/short-description`
+3. If you are working from a fork, make sure your fork is synced with the original repository before creating a branch.
+4. Run `git checkout -b type/short-description`
 
 ### Branch naming pattern
 
