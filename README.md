@@ -21,6 +21,7 @@ Go through at least one of these before you begin:
 ## 1. How to Fork the Repository
 
 > Do this once at the start of the project.
+> If you are added as a collaborator with write access, you can clone the shared repository directly instead of forking. If you do not have write access, fork the repository first and work from your fork.
 
 1. Open the repository page on GitHub.
 2. Click **Fork** in the top-right corner.
